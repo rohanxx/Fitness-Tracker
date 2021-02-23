@@ -1,1 +1,10 @@
-<p>training works!</p>
+<mat-tab-group *ngIf="!onGoingTraining">
+    <mat-tab label="New Exercise">
+        <new-training></new-training>
+    </mat-tab>
+    <mat-tab label="Past Exercises">
+        <past-training></past-training>
+    </mat-tab>
+</mat-tab-group>
+
+<current-training *ngIf="onGoingTraining"></current-training>
